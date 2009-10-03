@@ -1,5 +1,8 @@
 Revision history for cpan2rpm
 
+2.029 03/10/2009 13:42:30
+- Use Pod::Parser replace Pod::Text.
+
 2.028 17/06/2005 22:09:44
 - added docs about using proxies
 - Nahant now supported

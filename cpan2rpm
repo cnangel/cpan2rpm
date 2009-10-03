@@ -20,7 +20,7 @@
 #
 
 use vars qw($VERSION $VX);
-$VERSION = "2.028";
+$VERSION = "2.029";
 
 # --- prologue ----------------------------------------------------------------
 
@@ -28,7 +28,8 @@ use strict;
 use warnings;
 use Getopt::Long;
 use Sys::Hostname;
-use Pod::Text;
+#use Pod::Text;
+use Pod::Parser;
 
 my ($ME, $RPM, $TMPDIR, %RPMDIR, $CWD, %info, %meta, $ARGS);
 
@@ -359,7 +360,8 @@ sub get_mod {
 
 sub get_meta {
     my $info = shift || $_; local $_;
-    my $pod = Pod::Text->new();
+#    my $pod = Pod::Text->new();
+	my $pod = Pod::Parser->new();
 
     print "Metadata retrieval\n";
 
